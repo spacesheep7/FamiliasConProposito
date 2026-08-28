@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hombres</title>
+<title>Iglesia & Jóvenes</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
 
 <style>
 body{
 margin:0;font-family:'Poppins',sans-serif;
-background:linear-gradient(180deg,#4f7345,#273922);
-color:#f4f4f4}
+background:linear-gradient(180deg,#ffffff,#1b24335f);
+color:#244180}
 
 /* NAV */
 nav{
@@ -98,11 +98,11 @@ nav{
 section{padding:80px 20px;opacity:0;transform:translateY(40px);transition:0.8s ease}
 section.visible{opacity:1;transform:translateY(0)}
 
-.hero{height:70vh;display:flex;flex-direction:column;justify-content:center;align-items:center; text-align: center;/*background:radial-gradient(circle,#ffffff,#1b24335f)*/}
+.hero{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;/*background:radial-gradient(circle,#ffffff,#1b24335f)*/}
 .hero h1{font-size:3rem}
 
-.btn{background:#163067;;border:none;padding:12px 20px;border-radius:25px;margin:10px;color:#fff;font-weight:600;cursor:pointer;text-decoration: none;box-shadow: black,2px;}
-.btn:hover{ background-color:#06173d ; box-shadow: #000000; }
+.btn{background:#244180;border:none;padding:12px 20px;border-radius:25px;margin:10px;color:#fff;font-weight:600;cursor:pointer}
+.btn:hover{ background-color: #802424; }
 
 .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
 .gallery img{width:100%;border-radius:10px}
@@ -118,9 +118,7 @@ section.visible{opacity:1;transform:translateY(0)}
 
 <!-- NAV -->
 <nav>
-  <div class="logo">
-   <img src="imgs/logo.png" alt="" height="50vh">
-</div>
+  <div class="logo">Fcp.</div>
   <div class="hamburger" onclick="toggleMenu()">☰</div>
 </nav>
 
@@ -129,36 +127,33 @@ section.visible{opacity:1;transform:translateY(0)}
 
 <!-- MENU -->
 <div class="menu" id="menu">
-    <div class="close-btn" onclick="toggleMenu()">✕</div>
-  <a href="index.html" onclick="toggleMenu()">Inicio</a>
-  <a href="Matrimonios.html" onclick="toggleMenu()">Matrimonios</a>
-  <a href="Jovenes.html" onclick="toggleMenu()">Jovenes</a>
-  <a href="Mujeres.html" onclick="toggleMenu()">Mujeres</a>
-  <a href="Hombres.html" onclick="toggleMenu()">Hombres</a>
+  <div class="close-btn" onclick="toggleMenu()">✕</div>
+  <a href="#hero" onclick="toggleMenu()">Inicio</a>
+  <a href="#mapas" onclick="toggleMenu()">Ubicación</a>
+  <a href="#galeria" onclick="toggleMenu()">Galería</a>
+  <a href="#redes" onclick="toggleMenu()">Redes</a>
 </div>
 
 <!-- HERO -->
 <section id="hero" class="hero visible">
-  <h1>Hombres</h1>
-  <p>En este espacio podras encontrar las reuniones de Hombres que tenemos para ti, asi como su horario y dirección.</p>
-  <!--
-  <a class="btn" href="#mapas">Reuniones</button>
-  <a class="btn" href="#galeria">Galeria</button>
-  <a class="btn" href="#redes">Redes</button>  
-  -->
-  
+  <h1>Bienvenido</h1>
+  <p>Iglesia Familias con proposito.</p>
+  <a class="btn" href="Matrimonios.html">Reuniónes de Matrimonios</a>
+  <button class="btn" onclick="whatsapp('1234567890')">Reuniónes de Jóvenes</button>
+  <button class="btn" onclick="whatsapp('1234567890')">Reuniónes de Mujeres</button>
+  <button class="btn" onclick="whatsapp('1234567890')">Reuniónes de Hombres</button>
 </section>
 
 <!-- MAPAS -->
 <section id="mapas">
   <h2>Ubicación</h2>
- <div class="maps">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3396.2314032476484!2d-106.38742752458849!3d31.654888274152675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86e75d7ba656ab25%3A0x15d3a6cdc43cb133!2sFamilias%20Con%20Proposito!5e0!3m2!1ses-419!2smx!4v1780091876243!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
- </div>
+  <div class="maps">
+    <iframe src="https://www.google.com/maps?q=Ciudad+Juarez&output=embed"></iframe>
+    <iframe src="https://www.google.com/maps?q=Chihuahua&output=embed"></iframe>
+  </div>
 </section>
 
 <!-- GALERIA -->
- <!--
 <section id="galeria">
   <h2>Galería</h2>
   <div class="gallery">
@@ -168,22 +163,21 @@ section.visible{opacity:1;transform:translateY(0)}
     <img src="https://picsum.photos/300/200?4">
   </div>
 </section>
--->
 
 <!-- REDES -->
 <section id="redes">
   <h2>Redes Sociales</h2>
   <div class="socials">
-    <a href="https://www.facebook.com/Familiasconpropositocdjuarez/">Facebook</a>
-    <a href="https://www.youtube.com/redirect?event=channel_description&redir_token=QUFFLUhqazd2R3VNbFpIeDJHbEpoTmZSbDRiMDdPeHFsd3xBQ3Jtc0tsQWhIVUFzNm5yVVpqS0xDbEdFWktmNG9zaWtsVkg1UFdLRDZjbV9xaUdZaG8waVhsYWNyZFVkMEZQZU1CeG5rQ1pkX2FjTWRia3llSUJ3NjhOUmtwckZTWm5OU1BHWTBZNWFsdFo4MmdBUmFXdGx6WQ&q=https%3A%2F%2Fwww.instagram.com%2Ffamiliasconpropositocdjuarez%2F">Instagram</a>
-    <a href="https://www.youtube.com/@Familiasconproposito777">YouTube</a>
+    <a href="#">Facebook</a>
+    <a href="#">Instagram</a>
+    <a href="#">YouTube</a>
   </div>
 </section>
 
 <script>
 
 function whatsapp(numero){
-  window.open(`https://wa.me/52${numero}`);
+  window.open(`https://wa.me/${numero}`,'_blank');
 }
 
 function toggleMenu(){
